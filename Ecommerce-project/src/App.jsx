@@ -1,18 +1,16 @@
-import HomePage from "./Pages/HomePage"
-import {Routes , Route} from 'react-router-dom'
-
+import ChecoutPage from "./Pages/ChecoutPage";
+import HomePage from "./Pages/HomePage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
- 
   return (
     <>
-    <Routes>
-      <Route index element={<HomePage />} />
-      <Route path="checkout.html" element={<div>test</div>} />
-    </Routes>
-       
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="checkout" element={<ChecoutPage />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
