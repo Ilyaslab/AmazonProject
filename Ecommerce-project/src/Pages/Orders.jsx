@@ -1,37 +1,11 @@
 import { Link } from "react-router-dom";
-import "./header.css";
-import "./orders.css"
+import "./orders.css";
+import Header from "../Components/Header.jsx";
 function Orders() {
   return (
     <>
-      <div className="header">
-        <div className="left-section">
-          <Link to="/" className="header-link">
-            <img className="logo" src="images/logo-white.png" width="80px" />
-            <img className="mobile-logo" src="images/mobile-logo-white.png" />
-          </Link>
-        </div>
-
-        <div className="middle-section">
-          <input className="search-bar" type="text" placeholder="Search" />
-
-          <button className="search-button">
-            <img className="search-icon" src="images/icons/search-icon.png" />
-          </button>
-        </div>
-
-        <div className="right-section">
-          <Link className="orders-link header-link" to="/order">
-            <span className="orders-text">Orders</span>
-          </Link>
-
-          <Link className="cart-link header-link" to="/checkout">
-            <img className="cart-icon" src="images/icons/cart-icon.png" />
-            <div className="cart-quantity">3</div>
-            <div className="cart-text">Cart</div>
-          </Link>
-        </div>
-      </div>
+      <title>Orders Page</title>
+      <Header />
 
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
@@ -65,7 +39,9 @@ function Orders() {
                 <div className="product-name">
                   Black and Gray Athletic Cotton Socks - 6 Pairs
                 </div>
-                <div className="product-delivery-date">Arriving on: August 15</div>
+                <div className="product-delivery-date">
+                  Arriving on: August 15
+                </div>
                 <div className="product-quantity">Quantity: 1</div>
                 <button className="buy-again-button button-primary">
                   <img
@@ -92,7 +68,9 @@ function Orders() {
                 <div className="product-name">
                   Adults Plain Cotton T-Shirt - 2 Pack
                 </div>
-                <div className="product-delivery-date">Arriving on: August 19</div>
+                <div className="product-delivery-date">
+                  Arriving on: August 19
+                </div>
                 <div className="product-quantity">Quantity: 2</div>
                 <button className="buy-again-button button-primary">
                   <img
@@ -139,7 +117,9 @@ function Orders() {
 
               <div className="product-details">
                 <div className="product-name">Intermediate Size Basketball</div>
-                <div className="product-delivery-date">Arriving on: June 17</div>
+                <div className="product-delivery-date">
+                  Arriving on: June 17
+                </div>
                 <div className="product-quantity">Quantity: 2</div>
                 <button className="buy-again-button button-primary">
                   <img
