@@ -4,6 +4,16 @@ import './HomePage.css';
 import { Link } from 'react-router-dom';
 import { products } from '../../starting-code/data/products.js';
 function HomePage() {
+    fetch('http://localhost:3000/api/products')
+      .then((response) => {
+        return response.json();
+      }).then((data) => {
+        console.log(data);
+      })
+
+
+
+
     return(
       <>   
           <title>Ecommerce Project</title>
