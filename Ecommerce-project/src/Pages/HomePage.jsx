@@ -3,14 +3,17 @@ import axios from 'axios';
 import Header from '../Components/Header.jsx';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
-import { products } from '../../starting-code/data/products.js';
+import { useEffect, useState } from 'react';
 function HomePage() {
-    axios.get('http://localhost:3000/api/products')
+  const [products,setProducts] = useState([])
+
+  useEffect(()=>{
+     axios.get('http://localhost:3000/api/products')
       .then((response) => {
-         console.log(response.data);
+         setProducts(response.data);
       })
-
-
+  },[])
+   
 
 
     return(
