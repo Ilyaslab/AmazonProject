@@ -9,10 +9,14 @@ function App() {
   const Tracking = lazy(()=>import("./Pages/tracking.jsx"));
   const [cart,setCart]= useState([])
     useEffect(()=>{
-       axios.get('/api/cart-items?expand=product')
-     .then((response)=>{
+      const getAppData= async ()=>{
+        const response = await axios.get('/api/cart-items?expand=product')
         setCart(response.data)
-     })
+      }
+       
+         
+     getAppData();
+    
     },[])
   return (
    
