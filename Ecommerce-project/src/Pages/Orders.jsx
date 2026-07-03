@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./orders.css";
 import Header from "../Components/Header.jsx";
 import { Fragment, useEffect, useState } from "react";
-import formatMoney from '../utils/money.js';
+import {formatMoney} from '../utils/money.js';
 import dayjs from 'dayjs';
 function Orders({cart}) {
   const[orders,setOrders]=useState([])
