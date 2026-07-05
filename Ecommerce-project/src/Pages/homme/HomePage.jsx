@@ -5,7 +5,7 @@ import './HomePage.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ProductsGrid } from './productsGrid.jsx';
-function HomePage({ cart }) {
+function HomePage({ cart,getAppData }) {
   const [products,setProducts] = useState([])
   
 
@@ -27,7 +27,7 @@ function HomePage({ cart }) {
 
 
           <div className="home-page">
-           <ProductsGrid products={products} />
+           <ProductsGrid products={products} getAppData={getAppData} />
           </div>
       </>
       
