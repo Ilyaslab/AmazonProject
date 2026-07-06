@@ -2,7 +2,7 @@ import { formatMoney } from "../../utils/money";
 import  dayjs  from "dayjs";
 import { useState } from "react";
 import { DeliveryOptions } from "./DeliveryOptions";
-export function OrderSummary({deliveryOptions , cart }) {
+export function OrderSummary({deliveryOptions , cart ,getAppData}) {
   const[selectedOptions,setSelectedOptions]=useState({})
     return(
         <div className="order-summary">
@@ -49,7 +49,7 @@ export function OrderSummary({deliveryOptions , cart }) {
                               </div>
                             </div>
         
-                            <DeliveryOptions  setSelectedOptions={setSelectedOptions} cartItem={cartItem} deliveryOptions={deliveryOptions}/>
+                            <DeliveryOptions  setSelectedOptions={setSelectedOptions} cartItem={cartItem} deliveryOptions={deliveryOptions} getAppData={getAppData}/>
                           </div>
                         </div>
                       );

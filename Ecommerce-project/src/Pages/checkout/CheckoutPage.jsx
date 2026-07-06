@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { OrderSummary } from "./OrderSummary";
 import { PaymmentSummary } from "./PaymmentSummary";
-function ChecoutPage({ cart }) {
+function ChecoutPage({ cart,getAppData }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const[paymentSummary,setPaymentSummary]=useState(null)
   useEffect(() => {
@@ -21,7 +21,7 @@ function ChecoutPage({ cart }) {
     }
     getCheckoutPage()
       
-  }, []);
+  }, [cart]);
 
   return (
     <>
@@ -54,7 +54,7 @@ function ChecoutPage({ cart }) {
         <div className="page-title">Review your order</div>
 
         <div className="checkout-grid">
-         <OrderSummary deliveryOptions={deliveryOptions} cart={cart}/>
+         <OrderSummary deliveryOptions={deliveryOptions} cart={cart} getAppData={getAppData}/>
             {paymentSummary && 
             (
               <>
