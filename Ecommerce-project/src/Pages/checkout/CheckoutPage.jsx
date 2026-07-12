@@ -54,7 +54,8 @@ function ChecoutPage({ cart,getAppData }) {
         <div className="page-title">Review your order</div>
 
         <div className="checkout-grid">
-         <OrderSummary deliveryOptions={deliveryOptions} cart={cart} getAppData={getAppData}/>
+         <OrderSummary deliveryOptions={deliveryOptions} cart={cart} getAppData={getAppData}
+          />
             {paymentSummary && 
             (
               <>

@@ -1,5 +1,5 @@
 import { Product } from './Product';
-export function ProductsGrid({products,getAppData}) {
+export function ProductsGrid({products,getAppData }) {
   
   return (
     <div className="products-grid">

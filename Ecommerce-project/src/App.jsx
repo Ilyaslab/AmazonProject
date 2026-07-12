@@ -16,12 +16,15 @@ function App() {
   useEffect(() => {
     getAppData();
   }, []);
+
+ 
+
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route index element={<HomePage cart={cart}  getAppData={getAppData}/>} />
-          <Route path="checkout" element={<ChecoutPage cart={cart} getAppData={getAppData}/>} />
+          <Route path="checkout" element={<ChecoutPage cart={cart} getAppData={getAppData} />} />
           <Route path="order" element={<Orders cart={cart} />} />
           <Route path="tracking" element={<Tracking />} />
         </Routes>
