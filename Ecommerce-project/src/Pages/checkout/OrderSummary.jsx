@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import { useState } from "react";
 import { DeliveryOptions } from "./DeliveryOptions";
 import axios from "axios";
+import  "./Select.css"
 export function OrderSummary({ deliveryOptions, cart, getAppData}) {
   const [selectedOptions, setSelectedOptions] = useState({});
   const [updateQuantity,setUpdateQuantity] = useState({})
@@ -53,7 +54,7 @@ export function OrderSummary({ deliveryOptions, cart, getAppData}) {
                     <span>
                       Quantity:{" "}
                       <span className="quantity-label">
-                     <select value={quantity}
+                     <select className="select" value={quantity}
                             onChange={(e) => {
                         setUpdateQuantity({
                           ...updateQuantity,

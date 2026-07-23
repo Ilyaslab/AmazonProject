@@ -59,7 +59,7 @@ function ChecoutPage({ cart,getAppData }) {
             {paymentSummary && 
             (
               <>
-              <PaymmentSummary paymentSummary={paymentSummary}/>
+              <PaymmentSummary paymentSummary={paymentSummary}  getAppData={getAppData} />
               </>
             )
             }
