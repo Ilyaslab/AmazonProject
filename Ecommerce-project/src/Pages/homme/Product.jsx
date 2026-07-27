@@ -62,7 +62,9 @@ export function Product({ product, getAppData }) {
         Added
       </div>
 
-      <button className="add-to-cart-button button-primary" onClick={addToCart}>
+      <button className="add-to-cart-button button-primary" onClick={addToCart}
+        data-testid='add-to-cart'
+      >
         Add to Cart
       </button>
     </div>
